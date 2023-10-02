@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login_style.css">
+    <title>BarterApp</title>
+    <script type="module" src="js/login.js"></script>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1 class="titulo">Bienvenido a BarterApp</h1>
+        <h2 class="subtitulo">Iniciar Sesión</h2>
+        <form action="" class="contenedor-inputs">
+            <label class="texto">Email:</label>
+            <input id="email" class="input" type="email" placeholder="ejemplo@gmail.com">
+            <label class="texto">Contraseña:</label>
+            <input id="contrasena" class="input" type="password">
+        </form>
+        <button class="btn-ingresar" id="ingresar">Ingresar</button>
+        <div class="tipos-ingreso">
+            <button class="google" id="loginGoogle">
+                <img class="img-google" src="img/google.png" alt="">
+                <span>Continuar con Google</span>
+            </button>
+            <button class="registro">
+                <a href="registro.html"><span>Eres nuevo? Registrate aquí</span></a>
+            </button>
+        </div>
+    </div>
+    <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Cuenta - BarterApp</title>
+    <link rel="stylesheet" href="css/verificar_usuario_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header> 
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/icon/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/icon/lupa.png">
+                    </button>
+                </div>
+            </div>
+            <ul id="menu">
+                <li><img id="img-perfil" src="img/icon/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="#">Verificar Cuenta</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>         
+    </header>
+    <div class="contenedor">
+        <h1>Verificación de Cuenta</h1>
+        <p>Ingrese la información solicitada:</p>
+        <p class="descripcion">Se realiza este proceso para garantizar la confianza y autenticidad de nuestros usuarios.</p>
+        <form>
+            <div class="seccion">
+                <label for="dni">Número de DNI:</label>
+                <input type="text" id="dni">
+                <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="seccion">
+                <label for="celular">Número de Celular:</label>
+                <input type="tel" id="celular">
+                <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="seccion_verificacion">
+                <label for="clave">Clave de Verificación:</label>
+                <input type="password" id="clave">
+                <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="botones">
+                <button class="guardar">Guardar</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

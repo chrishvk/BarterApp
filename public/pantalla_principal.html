@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/heade.css">
+    <link rel="stylesheet" href="css/pantalla_principal.css">
+    <title>BarterApp</title>
+    <script type="module" src="js/sesion.js"></script>
+</head>
+<body>
+    <header> 
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/icon/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>   
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+            
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/icon/lupa.png">
+                    </button>
+                </div>
+            
+            </div>
+            <ul id="menu">
+                
+                <li><img id="img-perfil" src="img/icon/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="editar_perfil.html">Editar Perfil</a></li>
+                        <li><a href="editar_prenda.html">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="verificar_usuario.html">Verifir Cuenta</a></li>
+                        <li><a id="cerrar" href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>         
+    </header>
+    <div class="mostrar" id="mostrar">
+        <div id="slick" class="slick">
+            <div class="cuadro">
+                <h4 id="titulo-prenda">SUETER TEJIDO ROSA</h4>
+                <div href="ver_prendas1.html" class="img-prenda" id="img-prenda">
+                    <a href="ver_prendas1.html"> 
+                        <picture>
+                            <img id="prenda" src="img/rosa 1.png" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="ver_prendas1.html">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">SUETER</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/sueter.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">CAMISA</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/camisa.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">CASACA ROJO</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/casaca rojo.jpeg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">CASACA MARRON</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/camisa.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+           
+        </div> 
+        <hr>
+        <div id="slick" class="slick">
+            <div class="cuadro">
+                <h4 id="titulo-prenda">CHALEJO TEJIDO</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/chaleco.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">PANTALON ACAMPANADO</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/pantalon.webp" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">POLERA AZUL</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/polera azul.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">POLERA ROJA</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="ver_prenda_polerarojo.html">
+                        <picture>
+                            <img id="prenda" src="img/polera/polera1.png" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="ver_prenda_polerarojo.html">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">SUETER TEJIDO</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/tejido.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="slick" class="slick">
+            <div class="cuadro">
+                <h4 id="titulo-prenda">ZAPATILLAS BLANCAS</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/zapatilla.jpeg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">TOP MARRON</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/top marron.jpg" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">TOP BEIGE</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="ver_prenda_top.html">
+                        <picture>
+                            <img id="prenda" src="img/top1.png" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="ver_prenda_top.html">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">POLERA MARRON</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/polera/polerama1.png" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+            <div class="cuadro">
+                <h4 id="titulo-prenda">CAMISETA PERUANA</h4>
+                <div class="img-prenda" id="img-prenda">
+                    <a href="#">
+                        <picture>
+                            <img id="prenda" src="img/peru1.png" alt="Image">
+                        </picture>
+                    </a>
+                </div>
+                <hr>
+                <div class="descp" id="descp">
+                    <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                    <button id="btn_ver"><a id="btn_ver" href="#">ver</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

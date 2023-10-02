@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/subir_prenda.css">
+    <title>BarterApp</title>
+</head>
+<body>
+    <header> 
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+            
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/lupa.png">
+                    </button>
+                </div>
+            
+            </div>
+            <ul id="menu">
+                
+                <li><img id="img-perfil" src="img/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="#">Verifir Cuenta</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>         
+    </header>
+    <main>
+        <h1 class="titulo">Subir Prenda</h1>
+        <div class="contenedor1">
+            <div class="contenedor2">
+                <div class="fotos">
+                    <div class="subtitulo">
+                        <h2>Subir fotos:</h2>
+                    </div>
+                    <div class="fotos_cargadas">
+                        <div class="fila1">
+                            <div class="imagenes">
+                                <img src="img/sueter.jpg" alt="">
+                            </div>
+                            <div class="imagenes">
+                                <img src="img/camisa.jpg" alt="">
+                            </div>
+                            <div class="imagenes">
+                                <img src="img/casaca rojo.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="fila2">
+                            <div class="imagenes">
+                                <img src="img/camisa.jpg" alt="">
+                            </div>
+                            <div class="imagenes">
+                                <img src="img/chaleco.jpg" alt="">
+                            </div>
+                            <div class="imagenes imagen-especial">
+                                <img src="img/subir_archivo.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="descripcion">
+                    <div class="subtitulo">
+                        <h2>Agregar datos:</h2>
+                    </div>
+                    <div class="datos">
+                        <div class="entradas">
+                            <div class="labels">
+                                <label for="">Tipo:</label>
+                                <label for="">Color:</label>
+                                <label for="">Material:</label>
+                                <label for="">Talla:</label>
+                            </div>
+                            <div class="inputs">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="area">
+                            <div>
+                                <label for="">Descripción de la prenda:</label>
+                                <br>
+                                <textarea name="" id="" cols="60" rows="10"></textarea>
+                            </div>
+                        </div>    
+                            
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="botones">
+            <button class="btn_cancelar" id="cancelar">Cancelar</button>
+            <button class="btn_puntuar" id="puntuar">Puntuar</button>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Prenda - BarterApp</title>
+    <link rel="stylesheet" href="css/editar_prenda-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header> 
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/icon/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/icon/lupa.png">
+                    </button>
+                </div>
+            </div>
+            <ul id="menu">
+                <li><img id="img-perfil" src="img/icon/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="#">Verificar Cuenta</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>         
+    </header>
+    <div class="contenedor">
+        <h1>Editar prenda</h1>
+        <div class="prenda">
+            <div class="avatar">
+                <img id="img-prendas" src="css/editar_prenda-styles.css" alt="Fotos">
+                <img id="img-prendas" src="css/editar_prenda-styles.css" alt="Fotos">
+                <img id="img-prendas" src="css/editar_prenda-styles.css" alt="Fotos">
+                <input type="file" id="fotoPrenda" accept="image/*">
+                <label for="fotoPrenda">Subir Foto</label>
+            </div>
+            <div class="informacion">
+                <div class="seccion">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo">
+                </div>
+                <div class="seccion">
+                    <label for="color">Color:</label>
+                    <input type="text" id="color">
+                </div>
+                <div class="seccion">
+                    <label for="material">Material:</label>
+                    <input type="text" id="material">
+                </div>
+                <div class="seccion">
+                    <label for="talla">Talla:</label>
+                    <input type="text" id="talla">
+                </div>
+                <div class="seccion_descripcion">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion"></textarea>
+                </div>            
+            </div>
+        </div>
+        
+        <div class="botones">
+            <button class="guardar">Guardar</button>
+            <button class="cancelar">Cancelar</button>
+            <button class="eliminar">Eliminar</button>
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - BarterApp</title>
+    <link rel="stylesheet" href="css/editar_perfil-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="text/javascript" src="js/editar_perfil.js"></script>
+</head>
+<body>
+    <header> 
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/icon/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                            <li><a href="#">Aceptar el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/icon/lupa.png">
+                    </button>
+                </div>
+            </div>
+            <ul id="menu">
+                <li><img id="img-perfil" src="img/icon/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="#">Verificar Cuenta</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>         
+    </header>
+    <div class="contenedor">
+        <h1>Mi Perfil</h1>
+        <hr>
+        <div class="perfil">
+            <div class="avatar">
+                <img src="css/editar_perfil-styles.css" alt="Foto de perfil">
+                <input type="file" id="fotoPerfil" accept="image/*">
+                <label for="fotoPerfil">Cambiar Foto</label>
+            </div>
+            <div class="informacion">
+                <div class="seccion">
+                    <h2>Información Pública</h2>
+                    <h3>Nombre Completo:</h3>
+                    <div class="datos">
+                        <label for="nombre">Angel Nerbayeis Cullanco Acevedo</label>
+                        <a href="#" class="editar-link" onclick="editar_nombre()">Editar</a>
+                    </div>
+                    <h3>Correo electrónico:</h3>
+                    <div class="datos">
+                        <label for="correo">72312896@continental.edu.pe</label>
+                        <a href="#" class="editar-link">Editar</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="seccion">
+                    <h2>Información Personal</h2>
+                    <h3>Contraseña:</h3>
+                    <div class="datos">
+                        <label for="contrasena">12345</label>
+                        <a href="#" class="editar-link">Cambiar contraseña</a>
+                    </div>
+                    <h3>Número de Celular:</h3>
+                    <div class="datos">
+                        <label for="celular">934347747</label>
+                        <a href="#" class="editar-link">Actualizar número telefónico</a>
+                        <i class="fas fa-check check-icon"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="verificado">
+                    <a href="#" class="editar-link">Cuenta verificada</a>
+                    <i class="fas fa-check check-icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <button class="actualizar">Actualizar</button>
+            <button class="cancelar">Cancelar</button>
+        </div>
+    </div>
+</body>
+</html>

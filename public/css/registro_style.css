@@ -1,0 +1,102 @@
+/* Variables de colores */
+:root {
+    /*Fondo*/
+    --color-bg: #CBFFAA;
+    --color-fnt: #3F523C;
+    --btn-aceptar: #3a8a52;
+    --btn-cancelar: #F22828; 
+    --txt-clr-white: #fff;   
+}
+
+* {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    color: var(--color-fnt);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.contenedor {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.registro {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.entradas {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 120px;
+}
+
+.label-texto {
+    font-size: 20px;
+    
+}
+
+.input-entrada {
+    font-size: 20px;
+    height: 2rem;
+    padding-left: 10px;
+    margin-top: -25px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.input-entrada:hover {
+    border: 2px solid #000;
+}
+
+.botones {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -35px;
+}
+
+.btn {
+    width: 20.5rem;
+    font-size: 1.5em;
+    height: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registrar:hover {
+    background-color: var(--btn-aceptar);
+    color: var(--txt-clr-white);
+}
+
+#cancelar:hover {
+    background-color: var(--btn-cancelar);
+    color: var(--txt-clr-white);
+}
+

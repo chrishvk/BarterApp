@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/registro_style.css">
+    <script type="module" src="js/registro.js"></script>
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="registro">
+            <h1>Regístrate</h1>
+        </div>
+        <form class="entradas">
+            <label class="label-texto">Nombre completo:</label>
+            <input id="nombreCompleto" class="input-entrada" type="text">
+            <label class="label-texto">Correo electrónico:</label>
+            <input class="input-entrada" type="email"  id="email">
+            <label class="label-texto">Cree una contraseña:</label>
+            <input class="input-entrada" type="password" id="contrasena">
+            <label class="label-texto">Repita la contraseña:</label>
+            <input class="input-entrada" type="password" id="contrasena2">
+        </form>
+        <div class="botones">
+            <button class="btn" id="registrar">Registrar</button>
+            <button class="btn" id="cancelar" onclick="cancelarRegistro()">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        function cancelarRegistro() {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>

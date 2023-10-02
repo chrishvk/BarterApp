@@ -1,0 +1,335 @@
+  *{
+    font-family:monospace;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/**/
+.navegacion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+body{
+    background-color: rgb(203, 255, 170);
+    
+}
+
+header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(84, 137, 51);
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+}
+/*Notificaciones*/
+#menu-notif{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#menu-notif li a{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+#menu-notif li a:hover {
+    color: rgb(255, 0, 0);
+    transition: all .3s;
+}
+    /*submenu-notificaciones*/
+
+#submenu-notif{
+    position: absolute;
+    background-color: darkgoldenrod;
+    width:18%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+#submenu-notif li a{
+    
+    display: block;
+    padding: 10px 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#menu-notif li:hover #submenu-notif{
+    visibility: visible;
+    opacity: 1;
+} 
+/*icono notificaciones*/
+#notificacion {
+    width: 10%;
+}
+
+#ic_notificacion {
+    width: 100%;
+    height: 40px;
+    
+}
+/*---------------------------------------------------------------*/
+
+/*Perfil 20*/
+#menu{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+ }
+#menu li{
+    position: relative;
+    
+    display: inline-block;
+}
+#menu li a{
+    display: flex;
+    text-decoration: none;
+}
+#menu li a:hover{
+    color: red;
+    transition: all .3s;
+}
+
+    /*Sub-Menu*/
+
+#sub_menu{
+    position: absolute;
+    background-color: rgb(16, 16, 16);
+    width: 190%;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s; 
+}
+
+#sub_menu li a{
+    display: block;
+    padding: 10px 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#menu li:hover #sub_menu{
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+#img-perfil{
+    height: 70px;
+    width: 100%;
+    position: relative;
+}
+
+/*BUSCADOR*/
+
+.buscador{
+    width: 65%;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 40%;
+    height:30px;
+    padding: 5px;
+}
+.btn_buscador{
+    width: 20%;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    
+}
+#btn_buscar{
+    background-color: rgb(253, 151, 151);
+    width: 100%;
+    height: 30px;
+    position:relative; 
+    
+}
+#lupa{
+    height: 20px;
+    width: 25px;
+}
+
+/*Boton Subir foto*/
+.foto{
+    width: 10%;
+    height: 30px;   
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="subir_foto"]{
+    background-color: rgb(165, 213, 117);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px;
+}
+
+/*Editar perfil*/
+.contenedor {
+    background-color: rgb(203, 255, 170);
+    padding: 70px;
+    max-width: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24px;
+    color: rgb(63, 82, 60);
+    text-align: center;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 200px;
+    text-align: center;
+}
+
+.avatar img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label[for="fotoPerfil"] {
+    background-color: rgb(63, 82, 60);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+}
+
+.informacion {
+    flex-grow: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.seccion {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.datos{
+    display: flex;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.editar-link {
+    text-decoration: none;
+    color: blue;
+    flex: 1;
+}
+
+.check-icon {
+    color: #00cc00;
+}
+
+.verificado {
+    color: #fff;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.botones {
+    margin-top: 20px;
+    text-align: right;
+}
+
+button.actualizar,
+button.cancelar {
+    width: 15%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.actualizar {
+    background-color: rgb(63, 82, 60);
+    color: #fff;
+    margin-right: 10px;
+}
+
+button.actualizar:hover {
+    background-color: #3a8a52;
+}
+
+button.cancelar {
+    background-color: rgb(63, 82, 60);
+    color: #fff;
+}
+
+button.cancelar:hover {
+    background-color: #f22828;
+}

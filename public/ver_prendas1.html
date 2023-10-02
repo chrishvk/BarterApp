@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ver-prendas1.css">
+    <link rel="stylesheet" href="css/heade.css">
+    <title>BarterApp</title>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <div id="notificacion">
+                <ul id="menu-notif">
+                    <li><img id="ic_notificacion" src="img/icon/bell.png" alt="notificaciones">
+                        <ul id="submenu-notif">
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                            <li><a href="#">Acepta a el intercambio</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="foto">
+                <input type="file" id="subir_foto" name="subir_foto">
+                <label for="subir_foto">Subir Foto</label>
+            </div>
+    
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+                <div id="btn_buscador">
+                    <button id="btn_buscar">
+                        <img id="lupa" src="img/icon/lupa.png">
+                    </button>
+                </div>
+            </div>
+            <ul id="menu">
+    
+                <li><img id="img-perfil" src="img/icon/Logo_perfil.png" alt="logo perfil">
+                    <ul id="sub_menu">
+                        <li><a href="#">Editar Perfil</a></li>
+                        <li><a href="#">Editar Prendas Subidas</a></li>
+                        <li><a href="#">Cambiar Apariencia</a></li>
+                        <li><a href="#">Verifir Cuenta</a></li>
+                        <li><a href="#">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="general-ver" class="general-ver">
+        <div class="contenedor-pantallas" id="contenedor-pantallas">
+            
+            <div class="pantalla_pren">
+                <div class="img_container">
+                    <img class="img_prenda" src="img/chompa_rosa/rosa 1.png" alt="">
+                </div>
+                <div id="menu_select">
+                    <div class="selector_img">
+                        <img class="imags active" src="img/chompa_rosa/rosa 1.png" alt="">
+                        <img class="imags" src="img/chompa_rosa/rosa 2.png" alt="">
+                        <img class="imags" src="img/chompa_rosa/rosa 3.png" alt="">
+                        <img class="imags" src="img/chompa_rosa/rosa 4.png" alt="">
+                        <img class="imags" src="img/chompa_rosa/rosa 5.png" alt="">
+                    </div>
+                </div>     
+            </div>
+            <div id="pantalla-desc">
+                <div id="sub-pantalla-desc">
+                    <div id="enc-desc">
+                        <span id="btn_estrella"> <img id="icon-estrella" src="img/icon/estrella2.png" alt="">5</span>
+                        <h3 id="titulo-desc">CASACA</h3>
+                    </div>
+                    <div id="cont-descrip">
+                        <label id="des-talla" for="">Talla: M</label><br>
+                        <label id="des-color" for="">Color: Rojo</label><br>
+                        <label id="des-tela" for="">Tela: Algodon</label><br>
+                        <label id="des-desc" for="">Descripcion: Es una prenda seminueva es una tela delicad </label>
+                    </div>
+                    <div id="enc-cab">
+                        <form id="enc-btn" action="#">
+                            <button id="btn-solicitar">
+                                <img id="ic-solicitar" src="img/icon/avion-de-papel.png" alt="solicitar">
+                                Solicitar
+                            </button>
+                            <select name="disponibilidades" id="select">
+                                <option value="Disponible">Disponible</option>
+                                <option value="No Disponible">No Disponible</option>  
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pantalla-opc">
+
+        </div>
+    </div>
+    <script src="js/pantalla.js"></script>
+</body>
+</html>
