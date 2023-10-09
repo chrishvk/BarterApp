@@ -1,9 +1,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 
+/* Autenticación */
 import {sendEmailVerification, getAuth, signInWithPopup, 
     createUserWithEmailAndPassword, signInWithEmailAndPassword,  
     onAuthStateChanged, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
+/* Base de datos */
+import { getFirestore, collection, addDoc, getDocs, setDoc, doc, query, where } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
+/* Mensaje de alerta */
 import { mostrarMsj } from './mostrarMensaje.js'
 
 const firebaseConfig = {
@@ -18,7 +23,10 @@ const firebaseConfig = {
 
 //Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+//Autenticación
 const auth = getAuth(app);
+//Base de datos
+const db = getFirestore(app);
 
 
 /* Iniciar Sesión */
@@ -27,10 +35,12 @@ ingresar.addEventListener('click', (e) => {
     var contrasena = document.getElementById('contrasena').value;
 
     signInWithEmailAndPassword(auth, email, contrasena).then(cred => {
-        mostrarMsj("Bienvenido");
+        mostrarMsj("Bienvenido a BarterApp");
         setTimeout(function() {
             window.location.href = 'pantalla_principal.html';}, 3500);
-        console.log(cred.user);
+        //console.log(cred.user);
+        const correo = cred.user.email;
+        console.log(correo); 
     }).catch(error => {
         const errorCode = error.code;
 
@@ -38,10 +48,10 @@ ingresar.addEventListener('click', (e) => {
             mostrarMsj('El correo no es válido', 'error');
         else if(errorCode == 'auth/user-disabled')
             mostrarMsj('El usuario ha sido deshabilitado', 'error');
-        else if(errorCode == 'auth/user-not-found')
-            mostrarMsj('El usuario no existe', 'error');
-        else if(errorCode == 'auth/wrong-password')
-            mostrarMsj('Contraseña incorrecta', 'error');
+        else if(errorCode == 'auth/invalid-login-credentials')
+            mostrarMsj('Datos de credenciales incorrectas', 'error');
+        else if(errorCode == 'auth/missing-password')
+            mostrarMsj('Ingrese la contraseña', 'error');
     });
 });
 
@@ -54,9 +64,18 @@ loginGoogle.addEventListener('click', async () => {
         const credenciales = await signInWithPopup(auth, provider)
         console.log(credenciales);
         mostrarMsj("Bienvenido " + credenciales.user.displayName);
+        sendEmailVerification(auth.currentUser).then(() => {
+            console.log('Se ha enviado un correo de verificación');
+        });
+
+        addDoc(collection(db, "Usuarios"), {
+            NombreCompleto: credenciales.user.displayName,
+            Email: credenciales.user.email,
+            Contraseña: ''
+        });  
         setTimeout(function() {
             window.location.href = 'pantalla_principal.html';}, 3500);
     } catch (error) {
-        console.log(error);
+        mostrarMsj('Ha fallado la conexión con Google', 'error');   
     }
 });

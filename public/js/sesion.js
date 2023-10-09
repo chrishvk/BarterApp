@@ -4,6 +4,8 @@ import {sendEmailVerification, getAuth, signInWithPopup,
     createUserWithEmailAndPassword, signInWithEmailAndPassword,  
     onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
+/* Mensaje de alerta */
+import { mostrarMsj } from './mostrarMensaje.js'
 
 const firebaseConfig = {
     apiKey: "AIzaSyBJLOqK56ZU-1wrhf4LxTOo5r0-_1y4zU4",
@@ -23,9 +25,10 @@ const auth = getAuth(app);
 /* Cerrar sesión */
 cerrar.addEventListener('click', (e) => {
     auth.signOut().then(() => {
-        alert('Sesion cerrada');
-        window.location.href = 'login.html';
+        mostrarMsj("Cerrando sesión");
+        setTimeout(function() {
+            window.location.href = 'login.html';}, 3500);
     }).catch((error) => {
-        alert('Error al cerrar sesión');
+        mostrarMsj('Hubo un error al cerrar sesión', 'error');
     });
 });

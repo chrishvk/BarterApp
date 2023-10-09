@@ -1,8 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 
+/* Autenticación */
 import {sendEmailVerification, getAuth, signInWithPopup, 
     createUserWithEmailAndPassword, signInWithEmailAndPassword,  
     onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+/* Base de datos */
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 
 import { mostrarMsj } from './mostrarMensaje.js'
 
@@ -16,9 +20,13 @@ const firebaseConfig = {
     measurementId: "G-Q1J7QXRCK5"
 };
 
+
 //Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+//Autenticación
 const auth = getAuth(app);
+//Base de datos
+const db = getFirestore(app);
 
 
 registrar.addEventListener('click', (e) => {
@@ -31,9 +39,30 @@ registrar.addEventListener('click', (e) => {
     console.log(nombre);
 
     createUserWithEmailAndPassword(auth, email, contra).then(cred => {
+        //Ordenar antes de conitinuar
+        const datos = [
+            document.getElementById('nombreCompleto').value,
+            document.getElementById('email').value,
+            document.getElementById('contrasena').value
+        ]
+      
+        if(datos.every(e => e.trim() !== '')) {
+          addDoc(collection(db, "Usuarios"), {
+            NombreCompleto: datos[0],
+            Email: datos[1],
+            Contraseña: datos[2]
+          });
+        } else {
+          mostrarMsj('Complete todos los campos', 'error');
+        }
+
+        sendEmailVerification(auth.currentUser).then(() => {
+            console.log('Se ha enviado un correo de verificación');
+        });
+
         setTimeout(function() {
-            window.location.href = 'pantalla_principal.html';}, 3500);
-        mostrarMsj("Bienvenido " + nombre);
+            window.location.href = 'login.html';}, 3500);
+        mostrarMsj("Ahora puedes iniciar sesión " + nombre);
             
     }).catch(error => {
         const errorCode = error.code;
